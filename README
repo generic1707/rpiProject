@@ -1,0 +1,12 @@
+Do priečinku music si nakopírujte svoju hudbu.
+Pred spustením "make" sa uistite že máte nainštalovaný g++.
+Otvorte priečinok v terminály a spustite "make".
+Po skončení "make" skopírujte pomocou "sudo dd if=final/sdcard.img of=/dev/{YOUR_DEVICE_ID_HERE} bs=1M status=progress" veci z priečinku final na svoju SD kartu.
+Namiesto textu {YOUR_DEVICE_ID_HERE} napíšte ID svojej SD karty.
+Vyberte SD kartu a vložte ju do svojho RaspberryPi_0w.
+Pripojte svoje RaspberryPi pomocou GPIO-USB kábla k počítaču.
+Spustite príkaz "sudo picocom -b 115200 /dev/ttyUSB0".
+Heslo je "root".
+Pripojte svoj USB audio dongle.
+Spustite príkaz "modprobe snd_usb_audio".
+Spustite "mpg123" s názvom svojej skladby a môžete počúvať.
