@@ -1,5 +1,6 @@
 CONFIG_FILE ?= mpg123.config
 BUILDROOT_URL ?= https://github.com/buildroot/buildroot.git
+FS_OVERLAY ?= /music
 
 .PHONY: build rpios
 
@@ -15,7 +16,7 @@ music:
 
 buildroot/.config: buildroot music
 	@echo "setting up config file..."
-	@sed -i -e "s/BR2_ROOTFS_OVERLAY=\"\"/BR2_ROOTFS_OVERLAY=\"..\/music\"/" $(CONFIG_FILE)
+	@sed -i -e "s/BR2_ROOTFS_OVERLAY=\"\"/BR2_ROOTFS_OVERLAY=\"..\$(FS_OVERLAY)\"/" $(CONFIG_FILE)
 	@cp $(CONFIG_FILE) buildroot/.config
 
 build: buildroot/.config
