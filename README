@@ -7,6 +7,6 @@ Vyberte SD kartu a vložte ju do svojho RaspberryPi_0w.
 Pripojte svoje RaspberryPi pomocou GPIO-USB kábla k počítaču.
 Spustite príkaz "sudo picocom -b 115200 /dev/ttyUSB0".
 Heslo je "root".
-Pripojte svoj USB audio dongle.
+Pripojte svoj USB audio adaptér.
 Spustite príkaz "modprobe snd_usb_audio".
 Spustite "mpg123" s názvom svojej skladby a môžete počúvať.
